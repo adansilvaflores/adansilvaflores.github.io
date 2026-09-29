@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+<link rel="stylesheet" href="/css/style.css">
+{% feed_meta %}
+</head>
+
+<body>
+
+<nav class="topnav">
+<a href="/">Adan Silva-Flores</a>
+<a href="/blog/">Blog</a>
+<a href="https://github.com/adansilvaflores">GitHub</a>
+</nav>
+
+{{ content }}
+
+<footer>
+<a href="/blog/feed.xml">RSS</a> ·
+<a href="https://www.instagram.com/uncultured.adan/">Instagram</a> ·
+<a href="https://www.linkedin.com/in/adan-silva-flores">LinkedIn</a> ·
+<a href="https://orcid.org/0000-0001-6238-0000">ORCID</a>
+</footer>
+
+</body>
+</html>
