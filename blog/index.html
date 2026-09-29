@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+description: Notes on microbial ecology, metagenomics, bioinformatics and doing science from the Sonoran Desert.
+---
+<section>
+
+<h1>Blog</h1>
+
+<p>
+Notes on what I am working on and thinking about: microbial ecology,
+metagenomics, bioinformatics and environmental data science.
+Posts in English <span class="tag">EN</span> and Spanish <span class="tag">ES</span>.
+</p>
+
+</section>
+
+{% for post in site.posts %}
+<section class="post-card">
+<p class="post-meta">
+{{ post.date | date: "%Y-%m-%d" }}
+{% if post.lang == "es" %}<span class="tag">ES</span>{% else %}<span class="tag">EN</span>{% endif %}
+{% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+</p>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<p>{{ post.description | default: post.excerpt | strip_html | truncate: 220 }}</p>
+</section>
+{% endfor %}
