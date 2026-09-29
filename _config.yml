@@ -1,0 +1,16 @@
+title: Adan Silva-Flores
+description: Microbial ecology, metagenomics, bioinformatics and environmental data science.
+url: https://adansilvaflores.github.io
+author: Adan Silva-Flores
+
+permalink: /blog/:year/:month/:title/
+timezone: America/Hermosillo
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: blog/feed.xml
+
+exclude:
+  - README.md
